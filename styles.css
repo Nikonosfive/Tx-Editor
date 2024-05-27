@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.social_button{
+  border: 1px solid;
+  padding: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  height: 20px;
+  border-radius: 2px;
+  margin: 2px;
+}
+
+#editor-container {
+    height: calc(100vh - 20px);
+    width: 99vw;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+    background-color: #eee;
+    border-bottom: 1px solid #ccc;
+}
+
+#toolbar label {
+    margin-right: 5px;
+}
+
+#toolbar select, #toolbar input, #toolbar button {
+    margin-right: 15px;
+}
+
+#font-size{
+  width: 50px;
+}
+
+#editor {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    resize: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#editor:focus {
+    outline: none;
+}
+
+#status-bar {
+    padding: 10px;
+    background-color: #eee;
+    border-top: 1px solid #ccc;
+    text-align: right;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode #toolbar, .dark-mode #status-bar {
+    background-color: #555;
+    color: #fff;
+}
+
+.dark-mode #editor {
+    background-color: #444;
+    color: #fff;
+}
