@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tx Editor by TADR</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="editor-container">
+        <div id="toolbar">
+            <label for="title-input">Title</label>
+            <input type="text" id="title-input" placeholder="タイトルを入力">
+            <label for="font-select">Font</label>
+            <select id="font-select">
+                <option value="Arial">Arial</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Verdana">Verdana</option>
+            </select>
+            <label for="font-size">Size</label>
+            <input type="number" id="font-size" value="16">
+            <button id="toggle-dark-mode">☀</button>
+            <label class="social_button"for="file-input">Input</label>
+            <input type="file" id="file-input" accept=".txt" hidden>
+          <label class="social_button"for="save-button">Save</label>
+            <button id="save-button" hidden>Save</button>
+        </div>
+        <textarea id="editor"></textarea>
+        <div id="status-bar">
+            <span id="char-count">文字数: 0</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
