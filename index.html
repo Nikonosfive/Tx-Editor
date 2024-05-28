@@ -1,37 +1,59 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tx Editor by TADR</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tx Editor by TADR</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div id="editor-container">
-        <div id="toolbar">
-            <label for="title-input">Title</label>
-            <input type="text" id="title-input" placeholder="タイトルを入力">
-            <label for="font-select">Font</label>
-            <select id="font-select">
-                <option value="Arial">Arial</option>
-                <option value="Courier New">Courier New</option>
-                <option value="Georgia">Georgia</option>
-                <option value="Times New Roman">Times New Roman</option>
-                <option value="Verdana">Verdana</option>
-            </select>
-            <label for="font-size">Size</label>
-            <input type="number" id="font-size" value="16">
-            <button id="toggle-dark-mode">☀</button>
-            <label class="social_button"for="file-input">Input</label>
-            <input type="file" id="file-input" accept=".txt" hidden>
-          <label class="social_button"for="save-button">Save</label>
-            <button id="save-button" hidden>Save</button>
-        </div>
-        <textarea id="editor"></textarea>
-        <div id="status-bar">
-            <span id="char-count">文字数: 0</span>
-        </div>
+
+<body id="bodying">
+  <div id="editor-container">
+    <div id="toolbar">
+      <p class="moji"><a>Tx.E</a></p>
+      <label for="title-input">Title</label>
+      <input type="text" id="title-input" placeholder="タイトルを入力">
+      <label for="font-select">Font</label>
+      <select id="font-select">
+        <option value="Arial">Arial</option>
+        <option value="Courier New">Courier New</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Verdana">Verdana</option>
+      </select>
+      <label for="font-size">Size</label>
+      <input type="number" id="font-size" value="16">
+      <button id="toggle-dark-mode">☀</button>
+
+      <button id="add-sticky-note" class="social_button">付箋</button>
     </div>
-    <script src="script.js"></script>
+    <div id="editor-wrapper">
+      <div id="editor" contenteditable="true"></div>
+    </div>
+    <div id="status-bar">
+
+      <label for="encoding-select">Encoding</label>
+      <select id="encoding-select">
+        <option value="utf-8">UTF-8</option>
+        <option value="shift-jis">Shift-JIS</option>
+        <option value="unicode">Unicode</option>
+        <option value="jis">JIS</option>
+        <option value="ascii">ASCII</option>
+        <option value="euc">EUC</option>
+        <option value="ebcdic">EBCDIC</option>
+      </select>
+      <label class="social_button" for="save-button">Save</label>
+      <button id="save-button" hidden>Save</button>
+      <label class="social_button" for="file-input">Input</label>
+      <input type="file" id="file-input" accept=".txt" hidden>
+      <span class="span" id="char-count">文字数: 0</span>
+      <span class="span" id="byte-count">バイト数: 0</span>
+
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/encoding-japanese/2.0.0/encoding.min.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
