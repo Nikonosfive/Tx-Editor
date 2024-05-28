@@ -1,87 +1,165 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eeeeee;
 }
 
-.social_button{
+input {
+  border-radius: 3px;
+  border: 1px solid #aaaaaa;
+  height: 24px;
+  background-color: #eeeeee;
+}
+
+select {
+  border-radius: 3px;
+  border: 1px solid #aaaaaa;
+  background-color: #eeeeee;
+  height: 24px;
+}
+
+.moji {
+  font-size: 24px;
+  padding: 12px;
+  marign: 4px;
+  font-weight: 900;
+}
+
+.social_button {
   border: 1px solid;
-  padding: 2px;
-  padding-left: 4px;
-  padding-right: 4px;
-  height: 20px;
-  border-radius: 2px;
-  margin: 2px;
+  padding: 4px 6px;
+  border-radius: 3px;
+  border: 1px solid #007bff;
+  margin: 4px;
+  background-color: #007bff;
+  color: white;
+  transition: 0.3s;
+}
+
+.social_button:hover {
+  background-color: #0056b3;
 }
 
 #editor-container {
-    height: calc(100vh - 20px);
-    width: 99vw;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100vw;
+  border: 0px solid #ccc;
+  background-color: #eeeeeeee;
+  display: flex;
+  flex-direction: column;
 }
 
 #toolbar {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 10px;
-    background-color: #eee;
-    border-bottom: 1px solid #ccc;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  align-items: center;
+  padding: 20px;
+  height: 50px;
+  background-color: #dddddd;
+  border-bottom: 3px solid #ccc;
 }
 
 #toolbar label {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
-#toolbar select, #toolbar input, #toolbar button {
-    margin-right: 15px;
+#status-bar label {
+  margin-right: 5px;
 }
 
-#font-size{
+#toolbar select,
+#toolbar input,
+#toolbar button {
+  margin-right: 15px;
+}
+
+#font-size {
   width: 50px;
 }
 
+#editor-wrapper {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
 #editor {
-    flex-grow: 1;
-    padding: 10px;
-    border: none;
-    font-size: 16px;
-    resize: none;
-    width: 100%;
-    box-sizing: border-box;
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  font-size: 16px; /* Default font size */
+  line-height: 1.5; /* Default line height */
+  resize: none;
+  overflow: auto;
+  width: 100%;
+  box-sizing: border-box;
+  height: calc(100vh - 160px);
+  position: relative;
 }
 
 #editor:focus {
-    outline: none;
+  outline: none;
+}
+
+.sticky-note {
+  position: absolute;
+  background-color: #dddddd;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+  min-width: 100px;
+  min-height: 50px;
+  z-index: 10;
+}
+
+.sticky-note .delete-note {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  cursor: pointer;
+  font-size: 12px;
+  color: red;
 }
 
 #status-bar {
-    padding: 10px;
-    background-color: #eee;
-    border-top: 1px solid #ccc;
-    text-align: right;
+  align-items: center;
+  padding: 10px;
+  background-color: #dddddd;
+  border-top: 0px solid #ccc;
+  position: fixed;
+  bottom: 0px;
+  width: calc(100vw - 20px);
+  overflow: scroll;
+  display: flex;
+}
+
+.span {
+  white-space: nowrap;
+  padding: 6px;
+  background-color: #eeeeee;
+  margin: 3px;
+  border-radius: 3px;
+  color: #333333;
 }
 
 .dark-mode {
-    background-color: #333;
-    color: #fff;
+  background-color: #333;
+  color: #fff;
 }
 
-.dark-mode #toolbar, .dark-mode #status-bar {
-    background-color: #555;
-    color: #fff;
+.dark-mode #toolbar,
+.dark-mode #status-bar {
+  background-color: #555;
+  color: #fff;
 }
 
+.dark-mode #bodying,
 .dark-mode #editor {
-    background-color: #444;
-    color: #fff;
+  background-color: #444;
+  color: #fff;
 }
