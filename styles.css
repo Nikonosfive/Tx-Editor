@@ -89,7 +89,8 @@ select {
 
 #editor {
   flex-grow: 1;
-  padding: 10px;
+  padding: 40px;
+  padding-top: 10px;
   border: none;
   font-size: 16px; /* Default font size */
   line-height: 1.5; /* Default line height */
