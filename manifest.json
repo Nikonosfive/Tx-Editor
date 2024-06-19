@@ -1,7 +1,7 @@
 {
   "short_name": "Tx Editor",
   "name": "Tx Editor by TADR",
-  "description": "A multiple time console tool.",
+  "description": "Simple txt editor",
   "version": "1.00",
   "icons": [
       {
@@ -25,7 +25,7 @@
         "sizes": "512x512"
       }
     ],
-  "start_url": "https://site.tadr-tech.info/Txt",
+  "start_url": "https://site.tadr-tech.info/Tx-Editor",
   "display": "standalone",
   "lang": "ja-JP",
   "theme_color": "#dddddd",
