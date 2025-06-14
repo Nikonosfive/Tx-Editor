@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tx Editor App "Orange Editor"</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="editor-container">
+        <div class="toolbar">
+          <h3>Tx.E App <i>Orange</i></h3>
+            <select id="font-select">
+                <option value="Helvetica" selected>Helvetica</option>
+                <option value="Arial">Arial</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Courier New">Courier New</option>
+            </select>
+            <select id="font-size-select">
+                <option value="12px">12px</option>
+                <option value="14px">14px</option>
+                <option value="16px" selected>16px</option>
+                <option value="18px">18px</option>
+                <option value="20px">20px</option>
+                <option value="24px">24px</option>
+            </select>
+            <button id="reflect-button">反映</button>
+        </div>
+        <div contenteditable="true" class="text-editor" id="text-editor"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
